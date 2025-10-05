@@ -8,7 +8,7 @@ const Trips = () => {
   useEffect(() => {
     const fetchTrips = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_API_BASE}/routes`);
+        const res = await axios.get(`${import.meta.env.REACT_APP_API_URL}/routes`);
         setTrips(res.data);
       } catch (err) {
         console.error('Error fetching trips:', err);
